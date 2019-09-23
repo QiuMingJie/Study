@@ -6,4 +6,7 @@ package com.mybatisStudy;
  * @Description
  */
 public class test {
+    public void main() {
+
+    }
 }
