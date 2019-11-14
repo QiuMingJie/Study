@@ -39,6 +39,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mappers/MyMapper.xml" />
+        <mapper resource="MyMapper.xml" />
     </mappers>
 </configuration>

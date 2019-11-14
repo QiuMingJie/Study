@@ -1,6 +1,6 @@
 package com.mybatisStudy.mybatis;
 
-import com.mybatisStudy.entity.Student;
+import com.entity.Student;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

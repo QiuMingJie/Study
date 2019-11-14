@@ -14,7 +14,7 @@ public class test {
     public static void main(String[] args) throws SQLException, IOException {
 //        ResultSet resultSet = MysqlConnection.executeSql("select * from stu");
 //        while (resultSet.next()) {
-//            System.out.println( resultSet.getString("id"));
+//            System.omappers/MyMapper.xmlut.println( resultSet.getString("id"));
 //        }
 
         /**
