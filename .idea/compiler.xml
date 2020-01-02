@@ -6,9 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dobboApi" />
+        <module name="dobboConsumer" />
+        <module name="dobboServiceImpl" />
+        <module name="dubbo" />
         <module name="ZooKeeper" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="dubbo" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

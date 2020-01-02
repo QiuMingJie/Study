@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ZooKeeper</module>
+        <module>dubbo</module>
+        <module>Dubbo</module>
     </modules>
     <dependencies>
 
