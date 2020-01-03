@@ -10,11 +10,13 @@
         <module name="dobboConsumer" />
         <module name="dobboServiceImpl" />
         <module name="dubbo" />
+        <module name="SpringBoot" />
         <module name="ZooKeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="dubbo" target="1.5" />
+      <module name="Study" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
