@@ -1,6 +1,6 @@
 package com.qiumingjie.springboot;
 
-import com.qiumingjie.springboot.com.qiumingjie.controller.HelloWorld;
+import com.qiumingjie.springboot.controller.HelloWorldController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,7 +29,7 @@ public class HelloTests {
 
     @Before
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new HelloWorld()).build();
+        mvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
     }
 
     @Test
