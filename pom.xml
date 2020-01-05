@@ -12,6 +12,8 @@
         <module>ZooKeeper</module>
         <module>dubbo</module>
         <module>Dubbo</module>
+        <module>java</module>
+        <module>Java</module>
     </modules>
     <dependencies>
 
