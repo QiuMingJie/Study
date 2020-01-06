@@ -1,5 +1,7 @@
 package com.qiumingjie.springboot.controller;
 
+import com.qiumingjie.springboot.service.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HelloWorldController {
+    @Autowired
+    UserRepository userRepository;
+
     /**
      *    获取properties中的内容
      */
@@ -22,4 +27,5 @@ public class HelloWorldController {
     public String index() {
         return "Hello World"+title;
     }
+
 }
