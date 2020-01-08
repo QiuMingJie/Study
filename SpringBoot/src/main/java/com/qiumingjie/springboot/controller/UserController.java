@@ -1,25 +1,32 @@
 package com.qiumingjie.springboot.controller;
 
 import com.qiumingjie.springboot.entity.User;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.qiumingjie.springboot.service.UserRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
 
 /**
  * @author QiuMingJie
- * @date 2020-01-06 16:57
- * @Description 查询数据库，运用了spring data jpa 和缓存
+ * @date 2020-01-07 19:06
+ * @Description
  */
-@RestController
-@RequestMapping("/user")
 public class UserController {
+    private UserRepository userRepository;
 
-    @RequestMapping("/getUser")
-    @Cacheable(value="user13-key")
-    public User getUser() {
-        User user=new User("aaddd@126.com", "aa", "aa123456", "aa","123");
-        User user1=new User("a1addd@126.com", "aa", "aa123456", "aa","123");
-        System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
-        return user1;
+    /**
+     * 分页查询
+     * @return
+     */
+    public Page<User> findAll(){
+        int page=1,size=10;
+        Sort sort = new Sort(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(page, size, sort);
+        return userRepository.findALL(pageable);
     }
+
+
+
 }

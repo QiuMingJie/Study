@@ -37,8 +37,8 @@ public class TestRedis {
         User user=new User("aa@126.com", "aa", "aa123456", "aa","123");
         ValueOperations<String, User> operations=redisTemplate.opsForValue();
         operations.set("com.neox", user);
-        operations.set("com.neo.f", user,1, TimeUnit.SECONDS);
-        System.out.println(redisTemplate.delete("ff"));
+        operations.set("com.neo.f", user,10, TimeUnit.SECONDS);
+        System.out.println(redisTemplate.delete("com.neox"));
         Thread.sleep(1000);
         //redisTemplate.delete("com.neo.f");
         boolean exists=redisTemplate.hasKey("com.neox");

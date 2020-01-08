@@ -1,4 +1,4 @@
-package com.qiumingjie.springboot;
+package com.qiumingjie.springboot.configuration;
 
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

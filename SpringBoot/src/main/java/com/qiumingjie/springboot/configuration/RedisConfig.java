@@ -1,4 +1,4 @@
-package com.qiumingjie.springboot.redis;
+package com.qiumingjie.springboot.configuration;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
