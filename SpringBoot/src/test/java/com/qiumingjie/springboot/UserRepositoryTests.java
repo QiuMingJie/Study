@@ -1,7 +1,7 @@
 package com.qiumingjie.springboot;
 
+import com.qiumingjie.springboot.dao.UserRepository;
 import com.qiumingjie.springboot.entity.User;
-import com.qiumingjie.springboot.service.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

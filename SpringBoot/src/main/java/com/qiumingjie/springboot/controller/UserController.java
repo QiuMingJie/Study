@@ -1,7 +1,7 @@
 package com.qiumingjie.springboot.controller;
 
+import com.qiumingjie.springboot.dao.UserRepository;
 import com.qiumingjie.springboot.entity.User;
-import com.qiumingjie.springboot.service.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +24,7 @@ public class UserController {
         int page=1,size=10;
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = PageRequest.of(page, size, sort);
-        return userRepository.findALL(pageable);
+        return userRepository.findAll(pageable);
     }
 
 

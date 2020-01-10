@@ -1,6 +1,7 @@
 package com.qiumingjie.springboot.controller;
 
-import com.qiumingjie.springboot.service.UserRepository;
+import com.qiumingjie.springboot.dao.UserRepository;
+import com.qiumingjie.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HelloWorldController {
+
     @Autowired
+    UserService userService;
+
     UserRepository userRepository;
 
     /**
@@ -25,7 +29,10 @@ public class HelloWorldController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String index() {
+        userService.test();
         return "Hello World"+title;
     }
+
+
 
 }

@@ -16,6 +16,12 @@
         <module>dobboServiceImpl</module>
         <module>dobboConsumer</module>
     </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>QiuMingJie</groupId>
+            <artifactId>study</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

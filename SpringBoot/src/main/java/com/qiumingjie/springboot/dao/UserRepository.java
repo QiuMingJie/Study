@@ -1,4 +1,4 @@
-package com.qiumingjie.springboot.service;
+package com.qiumingjie.springboot.dao;
 
 import com.qiumingjie.springboot.entity.User;
 import org.springframework.data.domain.Page;
@@ -7,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -44,6 +45,7 @@ import java.util.List;
  * <p>
  * 参数是根据顺序
  */
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUserNameAndEmail(String aa, String email);
@@ -59,13 +61,13 @@ public interface UserRepository extends JpaRepository<User, Long> {
      * @param pageable
      * @return
      */
-    Page<User> findALL(Pageable pageable);
+//    Page<User> findALL(Pageable pageable);
 
-    User findFirstByOrderByLastnameAsc();
-    User findTopByOrderByAgeDesc();
-    Page<User> queryFirst10ByLastname(String lastname, Pageable pageable);
-    List<User> findFirst10ByLastname(String lastname, Sort sort);
-    List<User> findTop10ByLastname(String lastname, Pageable pageable);
+//    User findFirstByOrderByLastnameAsc();
+//    User findTopByOrderByAgeDesc();
+    Page<User> queryFirst10ByUserName(String lastName, Pageable pageable);
+    List<User> findFirst10ByUserName(String lastName, Sort sort);
+    List<User> findTop10ByUserName(String lastName, Pageable pageable);
 
     @Modifying
     @Query("update User u set u.userName = ?1 where u.id = ?2")
@@ -76,8 +78,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("delete from User  where userName='1'")
     void deleteByUserId(Long id);
 
-    @Transactional(timeout = 10)
-    @Query("select u from User u where u.emailAddress = ?1")
-    User findByEmailAddress(String emailAddress);
+//    @Transactional(timeout = 10)
+//    @Query("select u from User u where u.emailAddress = ?1")
+//    User findByEmail(String emailAddress);
 
 }
