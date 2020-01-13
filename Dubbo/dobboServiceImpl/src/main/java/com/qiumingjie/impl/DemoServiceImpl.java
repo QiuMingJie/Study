@@ -8,7 +8,9 @@ import com.qiumingjie.service.DemoService;
  * @Description 实现接口
  */
 public class DemoServiceImpl implements DemoService {
+
     public String sayHello(String s) {
+
         return "hello";
     }
 }
