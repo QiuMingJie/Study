@@ -58,15 +58,18 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     /**
      * 分页查询
+     *
      * @param pageable
      * @return
      */
 //    Page<User> findALL(Pageable pageable);
 
 //    User findFirstByOrderByLastnameAsc();
-//    User findTopByOrderByAgeDesc();
+    User findByPassWordAndEmail(String a, String b);
+
     Page<User> queryFirst10ByUserName(String lastName, Pageable pageable);
     List<User> findFirst10ByUserName(String lastName, Sort sort);
+    List<User> findFirst0ByUserName(String lastName, Sort sort);
     List<User> findTop10ByUserName(String lastName, Pageable pageable);
 
     @Modifying
