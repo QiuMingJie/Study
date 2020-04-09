@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dobboApi" />
-        <module name="dobboConsumer" />
-        <module name="dobboServiceImpl" />
-        <module name="dubbo" />
-        <module name="java" />
-        <module name="Java" />
         <module name="SpringBoot" />
+        <module name="java" />
+        <module name="dobboApi" />
+        <module name="dubbo" />
+        <module name="Java" />
+        <module name="dobboServiceImpl" />
         <module name="ZooKeeper" />
+        <module name="rabbitmq" />
+        <module name="dobboConsumer" />
+        <module name="springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -21,5 +23,11 @@
       <module name="java" target="1.5" />
       <module name="Study" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rabbitmq" options="-parameters" />
+      <module name="springboot" options="-parameters" />
+    </option>
   </component>
 </project>
