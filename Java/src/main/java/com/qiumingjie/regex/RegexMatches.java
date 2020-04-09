@@ -48,11 +48,11 @@ public class RegexMatches {
         //只要匹配到就行了
         System.out.println(m.lookingAt());
         int count = 0;
-        while(m.find()) {
+        while (m.find()) {
             count++;
-            System.out.println("匹配了 "+count);
-            System.out.println("start(): "+m.start());
-            System.out.println("end(): "+m.end());
+            System.out.println("匹配了 " + count);
+            System.out.println("start(): " + m.start());
+            System.out.println("end(): " + m.end());
         }
         /*
         if (m.find( )) {

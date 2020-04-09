@@ -14,20 +14,19 @@ import javax.annotation.Resource;
  * @Description
  */
 @Service
-@Transactional(isolation = Isolation.SERIALIZABLE,rollbackFor = RuntimeException.class)
+@Transactional(isolation = Isolation.SERIALIZABLE, rollbackFor = RuntimeException.class)
 public class UserService {
     @Resource
     UserRepository userRepository;
 
 
-
-    @Transactional(isolation = Isolation.SERIALIZABLE,rollbackFor = RuntimeException.class)
+    @Transactional(isolation = Isolation.SERIALIZABLE, rollbackFor = RuntimeException.class)
     public void test() {
         User byId = userRepository.findById(7L).orElse(null);
         System.out.println(byId);
         byId.setEmail("123");
         userRepository.save(byId);
-         User user= userRepository.findById(7L).orElse(null);
+        User user = userRepository.findById(7L).orElse(null);
         System.out.println(user);
     }
 

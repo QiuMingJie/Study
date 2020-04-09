@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author QiuMingJie
  * @date 2020-01-03 10:13
  * @Description 设置拦截器
- *
+ * <p>
  * Filter过滤器：拦截web访问url地址。
  * Interceptor拦截器：拦截以 .action结尾的url，拦截Action的访问。
  * Spring AOP拦截器：只能拦截Spring管理Bean的访问（业务层Service）
@@ -57,7 +57,7 @@ public class WebConfiguration {
                 throws IOException, ServletException {
             // TODO Auto-generated method stub
             HttpServletRequest request = (HttpServletRequest) srequest;
-            System.out.println("this is MyFilter,url :"+request.getRequestURI());
+            System.out.println("this is MyFilter,url :" + request.getRequestURI());
             filterChain.doFilter(srequest, sresponse);
         }
 

@@ -27,13 +27,15 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
     /**
      * 分页查询
+     *
      * @return
      */
     @RequestMapping("/find")
-    public Page<User> findAll(){
-        int page=1,size=10;
+    public Page<User> findAll() {
+        int page = 1, size = 10;
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = PageRequest.of(page, size, sort);
         return userRepository.findAll(pageable);
@@ -73,12 +75,10 @@ public class UserController {
 
     @RequestMapping("/testJpa")
     public Object testJpa() {
-        Sort sort = new Sort(Sort.Direction.valueOf("DESC") ,"id");
+        Sort sort = new Sort(Sort.Direction.valueOf("DESC"), "id");
         Pageable pageable = new PageRequest(1, 1);
-        return userRepository.findByPassWordAndEmail("bb123456","bb@126.com");
+        return userRepository.findByPassWordAndEmail("bb123456", "bb@126.com");
     }
-
-
 
 
 }

@@ -19,6 +19,7 @@ public class TestController {
 
     /**
      * 开启redis缓存，会缓存return的类
+     *
      * @return
      */
     @RequestMapping("/redis")
@@ -32,7 +33,6 @@ public class TestController {
 
 
     /**
-     *
      * @param session
      * @return
      */

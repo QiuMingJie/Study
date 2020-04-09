@@ -68,17 +68,20 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findByPassWordAndEmail(String a, String b);
 
     Page<User> queryFirst10ByUserName(String lastName, Pageable pageable);
+
     List<User> findFirst10ByUserName(String lastName, Sort sort);
+
     List<User> findFirst0ByUserName(String lastName, Sort sort);
+
     List<User> findTop10ByUserName(String lastName, Pageable pageable);
 
     @Modifying
     @Query("update User u set u.userName = ?1 where u.id = ?2")
-    int modifyByIdAndUserId(String  userName, Long id);
+    int modifyByIdAndUserId(String userName, Long id);
 
     @Transactional
     @Modifying
-    @Query("delete from User  where userName='1'")
+    @Query("delete from User  where userName=?1")
     void deleteByUserId(Long id);
 
 //    @Transactional(timeout = 10)

@@ -22,14 +22,14 @@ public class ServiceRegister implements Runnable {
 
     private static final String SA_NODE_PREFIX = "sa_";
 
-    private String hostName="localhost:2181";
+    private String hostName = "localhost:2181";
 
     public void setHostName(String hostName) {
         this.hostName = hostName;
     }
 
     public ServiceRegister() throws IOException {
-        zk = new ZooKeeper(hostName, 10000,null);
+        zk = new ZooKeeper(hostName, 10000, null);
     }
 
 
@@ -50,7 +50,7 @@ public class ServiceRegister implements Runnable {
     }
 
     //测试用
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try {
             new ServiceRegister().run();
         } catch (IOException e) {

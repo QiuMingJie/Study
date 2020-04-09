@@ -10,7 +10,7 @@ import java.io.IOException;
  * @Description 售票
  */
 public class TicketSeller {
-    private void sell(){
+    private void sell() {
         System.out.println("售票开始");
         // 线程随机休眠数毫秒，模拟现实中的费时操作
         int sleepMillis = (int) (Math.random() * 2000);
@@ -32,7 +32,7 @@ public class TicketSeller {
 
     public static void main(String[] args) throws KeeperException, InterruptedException, IOException {
         TicketSeller ticketSeller = new TicketSeller();
-        for(int i=0;i<1000;i++){
+        for (int i = 0; i < 1000; i++) {
             ticketSeller.sellTicketWithLock();
         }
     }

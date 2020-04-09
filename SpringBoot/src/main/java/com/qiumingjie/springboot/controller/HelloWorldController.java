@@ -22,17 +22,16 @@ public class HelloWorldController {
     UserRepository userRepository;
 
     /**
-     *    获取properties中的内容
+     * 获取properties中的内容
      */
     @Value("${com.neo.title}")
     private String title;
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index() {
         userService.test();
-        return "Hello World"+title;
+        return "Hello World" + title;
     }
-
 
 
 }

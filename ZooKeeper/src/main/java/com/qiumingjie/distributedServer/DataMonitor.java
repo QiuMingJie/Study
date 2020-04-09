@@ -47,8 +47,7 @@ public class DataMonitor implements Watcher, AsyncCallback.ChildrenCallback {
         /**
          * The ZooKeeper session is no longer valid.
          *
-         * @param rc
-         *                the ZooKeeper reason code
+         * @param rc the ZooKeeper reason code
          */
         void closing(int rc);
     }
@@ -112,7 +111,7 @@ public class DataMonitor implements Watcher, AsyncCallback.ChildrenCallback {
         //如果存在，再次查询到最新children，此时仅查询，不要设置监控了
         if (exists) {
             try {
-                saIds = zk.getChildren(znode,null);
+                saIds = zk.getChildren(znode, null);
             } catch (KeeperException e) {
                 // We don't need to worry about recovering now. The watch
                 // callbacks will kick off any exception handling

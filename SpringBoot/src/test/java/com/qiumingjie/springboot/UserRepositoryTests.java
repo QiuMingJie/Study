@@ -30,9 +30,9 @@ public class UserRepositoryTests {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
         userRepository.deleteAll();
-        userRepository.save(new User("aa1", "aa", "aa@126.com", "aa123456",formattedDate));
-        userRepository.save(new User("bb2", "bb", "bb@126.com", "bb123456",formattedDate));
-        userRepository.save(new User("cc3", "cc", "cc@126.com", "cc123456",formattedDate));
+        userRepository.save(new User("aa1", "aa", "aa@126.com", "aa123456", formattedDate));
+        userRepository.save(new User("bb2", "bb", "bb@126.com", "bb123456", formattedDate));
+        userRepository.save(new User("cc3", "cc", "cc@126.com", "cc123456", formattedDate));
 
 //        Assert.assertEquals(3, userRepository.findAll().size());
 //        Assert.assertEquals("bb", userRepository.findByUserNameOrEmail("bb2", "cc@126.com").getNickName());
