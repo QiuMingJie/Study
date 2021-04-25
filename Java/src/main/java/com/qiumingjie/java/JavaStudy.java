@@ -6,6 +6,7 @@ package com.qiumingjie.java;
  * @Description
  */
 public class JavaStudy {
+
     private void care() {
         int count = 2;
         System.out.println("注意switch中切记要加break");
@@ -47,7 +48,7 @@ public class JavaStudy {
 
 
         int c = 100;
-        c =+ 2;  //注意，加号在后面
+        c = +2;  //注意，加号在后面
         System.out.println(c);
         //unicode解码发生在代码编译之前
         // \u000d System.out.println("Hello World!");
@@ -56,6 +57,7 @@ public class JavaStudy {
 
 
     public static void main(String[] args) {
+
         JavaStudy javaStudy = new JavaStudy();
         javaStudy.care();
     }

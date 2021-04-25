@@ -13,6 +13,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class Producer {
     private static final String EXCHANGE_NAME = "direct_exchange";
+
     public static void main(String[] args) throws IOException, TimeoutException {
 
         Connection connection = MqConnection.newConnection();

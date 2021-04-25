@@ -19,11 +19,11 @@ public class TestController {
 
     /**
      * 开启redis缓存，会缓存return的类
-     *
+     *  cacheNames 文件夹
      * @return
      */
     @RequestMapping("/redis")
-    @Cacheable(value = "user13-key")
+    @Cacheable(cacheNames = "test",value = "user13-key")
     public User getUser() {
         User user = new User("aaddd@126.com", "aa", "aa123456", "aa", "123");
         User user1 = new User("a1addd@126.com", "aa", "aa123456", "aa", "123");
