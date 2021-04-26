@@ -14,6 +14,7 @@
         <module name="dobboServiceImpl" />
         <module name="ZooKeeper" />
         <module name="rabbitmq" />
+        <module name="scala" />
         <module name="dobboConsumer" />
         <module name="jpa" />
       </profile>
